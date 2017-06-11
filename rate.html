@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    RED.nodes.registerType('RateFile',{
+        category: 'function',
+        color: '#a373ff',
+        defaults: {
+            name: {value:""},
+            delay: {value:"2000"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "camera.png",
+        label: function() {
+            return this.name||"RateFile";
+        }
+    });
+</script>
+<script type="text/x-red" data-template-name="RateFile">
+
+    <div class="form-row">
+        <label for="node-input-name">Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-delay">Ports</label>
+        <input type="text" id="node-input-delay">ms
+    </div>
+    
+</script>
+
+
+<script type="text/x-red" data-help-name="camera">
+    <p>Espera um determinado tempo antes de enviar as msgs.<br/>
+</script>
